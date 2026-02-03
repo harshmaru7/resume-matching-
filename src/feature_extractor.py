@@ -13,11 +13,27 @@ class ExtractedFeatures:
 
 class SkillExtractor:
     TECHNICAL_SKILLS = {
-        'python', 'java', 'javascript', 'sql', 'r',
-        'machine learning', 'deep learning', 'nlp',
-        'tensorflow', 'pytorch', 'scikit-learn',
-        'aws', 'gcp', 'azure', 'docker', 'kubernetes',
-    }
+            'python', 'java', 'javascript', 'typescript', 'c++', 'c#', 'ruby', 'go',
+            'golang', 'rust', 'scala', 'kotlin', 'swift', 'php', 'r', 'matlab',
+            'julia', 'perl', 'shell', 'bash', 'sql', 'nosql',
+            'machine learning', 'deep learning', 'neural networks', 'nlp',
+            'natural language processing', 'computer vision', 'reinforcement learning',
+            'supervised learning', 'unsupervised learning', 'feature engineering',
+            'model training', 'model deployment', 'mlops', 'llm', 'large language models',
+            'transformers', 'bert', 'gpt', 'generative ai', 'ai', 'artificial intelligence',
+            'data science', 'data analysis', 'data engineering', 'data mining',
+            'statistical analysis', 'statistics', 'predictive modeling', 'a/b testing',
+            'tensorflow', 'pytorch', 'keras', 'scikit-learn', 'sklearn', 'pandas',
+            'numpy', 'scipy', 'matplotlib', 'seaborn', 'huggingface',
+            'langchain', 'fastapi', 'flask', 'django', 'react', 'spacy', 'nltk',
+            'aws', 'amazon web services', 'azure', 'gcp', 'google cloud',
+            'docker', 'kubernetes', 'k8s', 'terraform', 'jenkins', 'ci/cd',
+            'postgresql', 'mysql', 'mongodb', 'redis', 'elasticsearch',
+            'snowflake', 'bigquery', 'vector databases', 'pinecone',
+            'spark', 'hadoop', 'airflow', 'kafka', 'databricks',
+            'git', 'github', 'gitlab',
+            'rest', 'restful', 'api', 'grpc', 'json',
+        }
 
     SOFT_SKILLS = {
         'leadership', 'communication', 'teamwork',

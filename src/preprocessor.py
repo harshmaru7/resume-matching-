@@ -58,7 +58,8 @@ class TextPreprocessor:
     def extract_years_experience(self, text:str) -> Optional[int]:
 
         patterns = [
-
+                    r'(\d+)\+?\s*years?\s+(?:of\s+)?experience',
+                    r'experience[:\s]+(\d+)\+?\s*years?',
         ]
 
         for pattern in patterns:

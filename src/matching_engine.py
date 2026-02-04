@@ -87,6 +87,18 @@ class ResumeMatchingEngine:
         else:
             return max(0.0, 1.0-(gap*0.15))
 
-    def score_resume(self, job_description: str, resume: strn, resume_id:str = "resume") -> MatchResult:
+    def score_resume(self, job_description: str, resume: str, resume_id:str = "resume") -> MatchResult:
+        jd_clean = self.preprocessor.clean(job_description)
+        resume_clean = self.preprocessor.clean(resume)
+        jd_features = self.skill_extractor.extract(jd_clean)
+        resume_features = self.skill_extractor.extract(resume_clean)
 
-        return MatchResult(resume_id=resume_id,final_score=0.0,semantic_score=0.0,skill_match_score=0.0,experience_score=0.0)
+        semantic_score = self._compute_semantic_similarity(jd_clean,resume_clean)
+        skill_score, matched_skills,missing_skills = self._compute_skill_match(jd_features, resume_features)
+        experience_score - self._compute_experience_match(jd_features.years_experience, resume_features.years_experience)
+
+        final_score = ( self.weights['semantic']*semantic_score + self.weights['skills']*skill_score + self.weights['experience']*experience_score)
+        final_score = max(0.0, min(1.0, final_score))
+
+
+        return MatchResult(resume_id=resume_id,final_score=final_score,semantic_score=semantic_score,skill_match_score=skill_match_score,experience_score=experience_score,matched_skills=matched_skills,missing_skills=missing_skills,)

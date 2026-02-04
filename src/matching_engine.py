@@ -74,7 +74,18 @@ class ResumeMatchingEngine:
 
         return score, list[str](matched), list[str](missing)
 
+    def _compute_experience_match(self, required: int, candidate: int ) -> float:
+        if required == 0:
+            return 1.0
 
+        if candidate >= required :
+            return 1.0
+
+        gap = required - candidate
+        if gap <= 2 :
+            return 1.0-(gap*0.2)
+        else:
+            return max(0.0, 1.0-(gap*0.15))
 
     def score_resume(self, job_description: str, resume: strn, resume_id:str = "resume") -> MatchResult:
 

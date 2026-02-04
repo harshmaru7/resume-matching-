@@ -58,6 +58,14 @@ class ResumeMatchingEngine:
             self._model = SentenceTransformer(self.model_name, device = device)
         return self._model
 
+    def _compute_semantic_similarity(self, text1:str,text:str) -> float:
+        embeddings = self.model.encode([text1, text2], convert_to_numpy=True)
+        similarity = np.dot(embeddings[0], embeddings[1]) / (np.linalg.norm(embeddings[0]) * np.linalg.norm(embeddings[1]))
+        simiarity = (similarity+1)/2
+        return float(similarity)
+
+
+
 
     def score_resume(self, job_description: str, resume: strn, resume_id:str = "resume") -> MatchResult:
 

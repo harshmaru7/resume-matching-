@@ -1,6 +1,13 @@
 import logging
+import numpy as np
 from typing import List, Dict, Optional
 from dataclasses import dataclass, field
+
+try:
+    from sentence_transformers import SentenceTransformer
+    SENTENCE_TRANSFORMERS_AVAILABLE = True
+except ImportError:
+    SENTENCE_TRANSFORMERS_AVAILABLE = False
 
 from .preprocessor import TextPreprocessor
 from .feature_extractor import SkillExtractor
@@ -41,6 +48,16 @@ class ResumeMatchingEngine:
         self.preprocessor = TextPreprocessor()
         self.skil_extractor = SkillExtractor()
         self._model = None
+
+    @property
+    def model(self):
+        if self._model is None:
+            if not SENTENCE_TRANSFORMERS_AVAILABLE:
+                raise ImportError("sentence transformer required, please install sentence-transformers")
+            device = 'cuda' if self.use_gpu else 'cpu'
+            self._model = SentenceTransformer(self.model_name, device = device)
+        return self._model
+
 
     def score_resume(self, job_description: str, resume: strn, resume_id:str = "resume") -> MatchResult:
 

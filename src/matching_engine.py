@@ -64,6 +64,15 @@ class ResumeMatchingEngine:
         simiarity = (similarity+1)/2
         return float(similarity)
 
+    def _compute_skill_match(self, jd_features: ExtractedFeatures, resume_features: ExtractedFeatures)
+    -> Tuple[float, List[str], List[str]]:
+        required_skills = jd_features.technical_skills | jd_features.soft_skills
+        candidate_skills = resume_features.technical_skills | resume_features.soft_skills
+
+        matched, missing = self.skill_extractor.get_matching_skills(required_skills, candidate_skills)
+        score = self.skill_extractor.calculate_skill_match_ratio(required_skills, candidate_skills)
+
+        return score, list[str](matched), list[str](missing)
 
 
 

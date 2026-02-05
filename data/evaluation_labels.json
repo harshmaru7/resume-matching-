@@ -1,0 +1,42 @@
+{
+  "resume_01_senior_ml_engineer": {
+    "label": "Good Match",
+    "score": 1.0,
+    "rationale": "7+ years ML experience, strong NLP/transformers expertise, PyTorch proficiency, AWS experience, published research, mentoring experience. Exceeds all requirements."
+  },
+  "resume_02_data_scientist": {
+    "label": "Good Match",
+    "score": 1.0,
+    "rationale": "5 years experience meets requirement, strong Python/ML skills, NLP experience with transformers, AWS deployment experience. Strong candidate."
+  },
+  "resume_03_software_engineer_ml": {
+    "label": "Partial Match",
+    "score": 0.5,
+    "rationale": "Strong software engineering background but only has ML through personal projects and courses. 4 years experience but not in ML. Potential to grow but needs training."
+  },
+  "resume_04_junior_data_analyst": {
+    "label": "Partial Match",
+    "score": 0.5,
+    "rationale": "Only 2 years experience, primarily SQL/Excel analyst work. Currently learning ML but not yet proficient. Too junior for senior role but shows interest."
+  },
+  "resume_05_backend_developer": {
+    "label": "Partial Match",
+    "score": 0.5,
+    "rationale": "Strong engineering skills (6 years) and Python expertise, but no ML experience. Would need significant ML training. Good infrastructure skills for MLOps."
+  },
+  "resume_06_project_manager": {
+    "label": "Poor Match",
+    "score": 0.0,
+    "rationale": "No technical ML skills. Role requires hands-on ML engineering, not project management. Wrong career track entirely."
+  },
+  "resume_07_marketing_specialist": {
+    "label": "Poor Match",
+    "score": 0.0,
+    "rationale": "Marketing background with no technical or ML experience. Completely misaligned with ML Engineer requirements."
+  },
+  "resume_08_fresh_graduate": {
+    "label": "Partial Match",
+    "score": 0.5,
+    "rationale": "Strong academic ML foundation, relevant projects with NLP/transformers, but 0 years of professional experience. Role requires 5+ years. Good for junior position."
+  }
+}

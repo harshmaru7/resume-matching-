@@ -102,3 +102,16 @@ class ResumeMatchingEngine:
 
 
         return MatchResult(resume_id=resume_id,final_score=final_score,semantic_score=semantic_score,skill_match_score=skill_match_score,experience_score=experience_score,matched_skills=matched_skills,missing_skills=missing_skills,)
+
+    def rank_resumes(self, job_description: str, resumes: Dict[str,str]) -> List[RankedResume]
+        ranked_results = []
+        for resume_id,resume_text in resumes.items():
+            match_result = self.score_resume(job_description, resume_text, resume_id)
+            rankeD_resuls.append(RankedResume(resume_id=resumed_id,resume_text=resume_text,match_result=match_result))
+        ranked_result.sort(key=lambda x: x.match_result.final_score, reverse=True)
+        for i, result in enumerate[Any](ranked_results):
+            result.rank = i +1
+        return ranked_results
+
+def create_engine(model_name: str = ResumeMatchingEngine.DEFAULT_MODEL, **kwargs) -> ResumeMatchingEngine:
+    return ResumeMatchingEngine(model_name=model_name, **kwargs)

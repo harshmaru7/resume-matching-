@@ -1,0 +1,33 @@
+Senior AI/ML Engineer
+
+Company: TechVision AI
+Location: San Francisco, CA (Hybrid)
+Department: AI Research & Development
+
+About Us:
+TechVision AI is a leading artificial intelligence company building next-generation machine learning solutions for enterprise clients.
+
+Job Description:
+We are seeking an experienced Senior AI/ML Engineer to design, develop, and deploy machine learning models at scale. You will work on cutting-edge NLP and computer vision projects.
+
+Required Qualifications:
+- 5+ years of experience in machine learning or data science
+- Strong proficiency in Python programming
+- Extensive experience with deep learning frameworks (PyTorch or TensorFlow)
+- Hands-on experience with NLP techniques and transformer architectures
+- Experience deploying ML models to production
+- Proficiency with cloud platforms (AWS, GCP, or Azure)
+- MS or PhD in Computer Science, Machine Learning, or related field
+
+Preferred Qualifications:
+- Experience with Large Language Models (LLMs)
+- Familiarity with MLOps tools (MLflow, Kubeflow)
+- Experience with Docker, Kubernetes
+- Published research in ML/AI conferences
+
+Technical Skills Required:
+- Languages: Python, SQL
+- ML Frameworks: PyTorch, TensorFlow, Scikit-learn
+- NLP: Hugging Face Transformers, spaCy, NLTK
+- Cloud: AWS (SageMaker, Lambda, S3), GCP
+- Infrastructure: Docker, Kubernetes, Git
